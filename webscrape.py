@@ -37,6 +37,7 @@ def webScrape(object):
         # llegir dades
         self.parse_html()
         # return dades
+        return self.data
         
 
 if __name__ =="__main__":
