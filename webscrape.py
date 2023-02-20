@@ -3,14 +3,16 @@ import urllib3
 def webScrape(object):
 
     def __init__(self)-> None:
+        self.url = "https://www.99-bottles-of-beer.net/lyrics.html"
         pass
 
     def get_web(self):
         #conectar http
-
+        httppool = urllib3.PoolManager()
         #enviar peticio
+        resposta = httppool.request("GET", self.url())
         #guardar html resposta
-        pass
+        self.html = resposta.data.decode("utf-8")
 
     def get_data(self):
         # descarregar web
